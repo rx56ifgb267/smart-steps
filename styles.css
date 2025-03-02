@@ -14,20 +14,49 @@ header {
     text-align: center;
 }
 
+nav {
+    margin: 20px 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+nav ul li::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ffffff;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+nav ul li:hover::after {
+    width: 100%;
 }
 
 main {
@@ -64,4 +93,9 @@ blockquote {
     padding-left: 10px;
     font-style: italic;
     color: #555555;
+}
+
+.centered-bold {
+    text-align: center;
+    font-weight: bold;
 }
