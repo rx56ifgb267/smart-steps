@@ -4,25 +4,39 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #333333;
+    color: #111111;
+    text-align: center; /* Center all text content */
 }
 
 header {
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #111111;
     padding: 20px 0;
-    text-align: center;
 }
 
-nav {
-    margin: 20px 0;
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    max-width: 1600px; /* Set a max width for the navbar */
+    margin: auto; /* Center the navbar on the page */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+.logo {
+    flex: 0; /* Prevent the logo from taking extra space */
+    white-space: nowrap; /* Prevent the text from wrapping to the next line */
+}
+
+.logo p {
+    margin: 0; /* Remove default margin from the paragraph */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Align navigation items to the right */
 }
 
 nav ul li {
@@ -31,22 +45,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #111111;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     padding: 5px 0;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f1f1f1;
+    color: #111111;
 }
 
 nav ul li::after {
     content: '';
     display: block;
     height: 2px;
-    background: #ffffff;
+    background: #111111;
     width: 0;
     transition: width 0.3s ease;
     position: absolute;
@@ -59,17 +73,45 @@ nav ul li:hover::after {
     width: 100%;
 }
 
+.about-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    max-width: 1200px; /* Set a max width for the section */
+    margin: auto; /* Center the section on the page */
+}
+
+.about-intro {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: flex-start; /* Align items at the start */
+    max-width: 1200px; /* Set a max width for the section */
+    margin: auto; /* Center the section on the page */
+}
+
+.text-box {
+    flex: 0 0 75%; /* Set the text box to take 1/3 of the width */
+    margin-right: 20px; /* Add some space between the text and image */
+}
+
+.image-box {
+    flex: 0 0 25%; /* Set the image box to take 2/3 of the width */
+}
+
+.portrait {
+    width: 100%; /* Make the image take the full width of the image box */
+    height: auto; /* Maintain aspect ratio */
+}
+
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
-    background: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
-    color: #000000;
+    color: #111111;
 }
 
 h2 {
@@ -78,24 +120,55 @@ h2 {
 
 section {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #f1f1f1;
     margin-top: 20px;
 }
 
 blockquote {
-    border-left: 4px solid #000000;
+    border-left: 4px solid #111111;
     margin: 10px 0;
     padding-left: 10px;
     font-style: italic;
-    color: #555555;
+    color: #111111;
 }
 
 .centered-bold {
-    text-align: center;
+    text-align: center; /* Center the text */
     font-weight: bold;
+    margin: 20px 0; /* Optional: Add some margin for spacing */
+    word-spacing: 5px;
+}
+
+a {
+    color: #111111;
+    text-decoration: none;
+    font-weight: normal;
+    position: relative;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+a:hover {
+    color: #111111;
+}
+
+a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #111111;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+
+a:hover::after {
+    width: 100%;
 }
