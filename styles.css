@@ -140,8 +140,9 @@ blockquote {
 .centered-bold {
     text-align: center; /* Center the text */
     font-weight: bold;
-    margin: 20px 0; /* Optional: Add some margin for spacing */
-    word-spacing: 5px;
+    margin-top: 40px; /* Optional: Add some margin for spacing */
+    margin-bottom: 40px;
+    word-spacing: 10px;
 }
 
 a {
@@ -171,4 +172,86 @@ a::after {
 
 a:hover::after {
     width: 100%;
+}
+
+#offerings {
+    text-align: center; /* Center the text */
+}
+
+#offerings ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: disc; /* Add bullet points */
+    display: inline-block; /* Center the list as a block */
+    text-align: left; /* Align text to the left for proper bullet alignment */
+}
+
+#offerings li {
+    margin: 0; /* Remove margin to keep bullet points close to text */
+    padding-left: 20px; /* Add padding to create space for the bullet */
+}
+
+#certifications {
+    text-align: center; /* Center the text */
+}
+
+#certifications ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: disc; /* Add bullet points */
+    display: inline-block; /* Center the list as a block */
+    text-align: left; /* Align text to the left for proper bullet alignment */
+}
+
+#certifications li {
+    margin: 0; /* Remove margin to keep bullet points close to text */
+    padding-left: 20px; /* Add padding to create space for the bullet */
+}
+
+#contact-prompt {
+    margin-top: 50px; /* Add some space above the contact prompt */
+    text-align: center; /* Center the text */
+}
+
+#contact-prompt p {
+    margin-bottom: 50px; /* Add margin below the paragraph */
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements */
+    max-width: 400px; /* Set a max width for the form */
+    margin: auto; /* Center the form on the page */
+}
+
+.form-group {
+    width: 100%; /* Make form groups take full width */
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make labels bold */
+}
+
+input,
+textarea {
+    width: 100%; /* Make inputs and textarea take full width */
+    padding: 10px; /* Add padding for better touch */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #111111; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #333333; /* Darker background on hover */
 }

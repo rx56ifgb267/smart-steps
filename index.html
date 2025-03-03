@@ -36,10 +36,11 @@
                 </div>
             </div>
         </section>
-        <p class="centered-bold">
-            C o a c h i n g &nbsp; &nbsp; M e n t o r a t &nbsp; &nbsp; A n t r e n a m e n t &nbsp; 1 to 1 &nbsp; &nbsp; C o n s i l i e r e
-        </p>
-
+        <section>
+            <p class="centered-bold">
+                C o a c h i n g &nbsp; &nbsp; M e n t o r a t &nbsp; &nbsp; A n t r e n a m e n t &nbsp; 1 to 1 &nbsp; &nbsp; C o n s i l i e r e
+            </p>
+        </section>
         <section id="offerings">
             <h2>Ce îți pot oferi:</h2>
             <ul>
@@ -48,7 +49,7 @@
                 <li>Strategii practice care să aducă rezultate reale.</li>
             </ul>
             <p>Ești pregătit să faci primul pas?</p>
-            <p>🌟 Începe acum călătoria către o versiune mai bună a ta și contactează-mă.</p>
+            <p>🌟 Începe acum călătoria către o versiune mai bună a ta și <a href="contact.html" style="font-weight: bold;">contactează-mă</a>.</p>
         </section>
 
         <section id="target-audience">
@@ -99,11 +100,46 @@
         <section id="contact-prompt">
             <h2>Ești pregătit pentru primul pas?</h2>
             <p>Hai să intrăm în contact!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nume:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesaj:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Trimite</button>
+            </form>
         </section>
     </main>
 
     <footer>
         <p>Smart Steps 2008-2025 | <a href="terms.html" class="terms-link">Termeni și condiții</a></p>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Here you can handle the collected data, e.g., send it to a server
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Message:', message);
+
+            // Optionally, you can clear the form after submission
+            this.reset();
+            alert('Mulțumesc pentru mesaj! Te voi contacta în curând.');
+        });
+    </script>
 </body>
 </html>
