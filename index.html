@@ -12,7 +12,10 @@
             <div class="logo">
                 <p><a href="index.html">Smart Steps</a></p>
             </div>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul id="nav-links">
                 <li><a href="index.html">Să ne cunoaștem</a></li>
                 <li><a href="services.html">Servicii</a></li>
                 <li><a href="testimonials.html">Referințe</a></li>
@@ -101,18 +104,15 @@
             <h2>Ești pregătit pentru primul pas?</h2>
             <p>Hai să intrăm în contact!</p>
             <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nume:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mesaj:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
+                <label for="name">Nume:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
                 <button type="submit">Trimite</button>
             </form>
         </section>
@@ -140,6 +140,10 @@
             this.reset();
             alert('Mulțumesc pentru mesaj! Te voi contacta în curând.');
         });
+        document.getElementById('hamburger').addEventListener('click', function() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active'); // Toggle the active class
+    });
     </script>
 </body>
 </html>
